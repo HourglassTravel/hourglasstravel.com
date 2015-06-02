@@ -1,0 +1,43 @@
+<div ng-controller="getquoted as ctrl">
+  <h1>Where will you be going?</h1>
+  <div class="btn-group">
+    <label class="btn btn-primary" ng-model="ctrl.tripType" btn-radio="'Walt Disney World'">Walt Disney World</label>
+    <label class="btn btn-primary" ng-model="ctrl.tripType" btn-radio="'Disneyland'">Disneyland</label>
+    <label class="btn btn-primary" ng-model="ctrl.tripType" btn-radio="'Disney Cruise'">Disney Cruise</label>
+    <label class="btn btn-primary" ng-model="ctrl.tripType" btn-radio="'Disney\'s Aulani'">Disney's Aulani</label>
+    <label class="btn btn-primary" ng-model="ctrl.tripType" btn-radio="'Adventures by Disney'">Adventures by Disney</label>
+    <label class="btn btn-primary" ng-model="ctrl.tripType" btn-radio="'Other'">Other</label>
+  </div>
+  <div collapse="ctrl.tripType != 'Walt Disney World'">
+    <form class="well well-lg">
+      <h2>About You</h2>
+      <h4>Not everything is required, but the more information we have the less we will need to contact you again for more info! :D</h4>
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" ng-model="ctrl.firstName" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" ng-model="ctrl.lastName" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" ng-model="ctrl.dob" class="form-control" datepicker-popup/>
+      </div>
+      <div class="form-group">
+        <label>Street Address</label>
+        <input type="text" ng-model="this.address" typeahead="address for address in ctrl.getLocation($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+        <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" ng-model="ctrl.email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" ng-model="ctrl.phone" class="form-control">
+      </div>
+    </form>
+  </div>
+  <p>Data: {{ctrl}}</p>
+</div>
