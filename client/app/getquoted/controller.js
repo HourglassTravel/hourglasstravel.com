@@ -3,6 +3,8 @@ angular.module('hourglasstravel')
 
 function controller($http) {
 
+  this.data = {};
+
   this.getLocation = function(val) {
     return $http.get('http://maps.googleapis.com/maps/api/geocode/json', {
       params: {
@@ -16,5 +18,10 @@ function controller($http) {
     });
   };
 
+  this.post = function() {
+    return $http.post('/api/getquoted', this.data).then(function(data) {
+      console.log(data);
+    });
+  };
 
 }
