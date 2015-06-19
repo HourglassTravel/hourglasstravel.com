@@ -1,6 +1,5 @@
-var express = require('express');
 
-var app = express();
+var port = process.env.PORT || 9000;
+var app = require('./server/config');
 
-app.use(express.static(__dirname + '/client'));
-app.listen(9000);
+app.listen(port);
