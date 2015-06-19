@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/garrettjoecox/hourglasstravel.com",
   "dependencies": {
+    "body-parser": "^1.12.4",
     "bower": "^1.4.1",
-    "express": "^4.12.3"
+    "express": "^4.12.4",
+    "fs-utils": "^0.6.0"
   }
 }
