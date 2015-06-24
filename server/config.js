@@ -14,7 +14,7 @@ app.use('/api/quotes', quotesRouter);
 require('./users/router')(usersRouter);
 require('./quotes/router')(quotesRouter);
 
-mongoose.connect(process.env.MONGOLABURI || 'mongodb://localhost:27017/hourglass');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/hourglass');
 
 module.exports.app = app;
 module.exports.db = mongoose.connection;
