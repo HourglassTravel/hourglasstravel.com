@@ -21,7 +21,8 @@ function controller($http) {
   };
 
   this.post = function() {
-    return $http.post('/api/quotes', this.data).then(function(data) {
+    var name = this.data.lastName + '.' + this.data.firstName;
+    return $http.post('/api/quotes', {name: name, data: this.data}).then(function(data) {
       console.log(data);
     });
   };

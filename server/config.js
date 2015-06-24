@@ -1,31 +1,20 @@
 
 var express = require('express');
+var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var fs = require('fs-utils');
 
 var app = express();
+var usersRouter = express.Router();
+var quotesRouter = express.Router();
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client'));
+app.use('/api/users', usersRouter);
+app.use('/api/quotes', quotesRouter);
+require('./users/router')(usersRouter);
+require('./quotes/router')(quotesRouter);
 
-app.post('/api/quotes', function(req, res) {
-  var quotes = require('../quotes.json');
-  var name = req.body.lastName + '.' + req.body.firstName;
-  quotes[name] = req.body;
-  fs.writeJSON('./quotes.json', quotes, function(err) {
-    if (err) {
-      console.log(err);
-      res.send(err);
-    } else {
-      res.send(req.body);
-    }
-  });
-});
+mongoose.connect(process.env.MONGOLABURI || 'mongodb://localhost:27017/hourglass');
 
-app.get('/api/quotes', function(req, res) {
-
-});
-
-module.exports = app;
-
-
+module.exports.app = app;
+module.exports.db = mongoose.connection;
