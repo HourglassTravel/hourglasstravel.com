@@ -1,0 +1,11 @@
+
+<div class="container" ng-controller="dashboard as ctrl">
+    <h1>Dashboard Page</h1>
+    <accordion close-others="true">
+        <accordion-group ng-repeat="quote in ctrl.quotes" heading="{{quote.name}}">
+            <h1>{{quote.data.firstName}} {{quote.data.lastName}}</h1>
+            <h5>{{quote.data.phone}}<span ng-if="quote.data.email && quote.data.phone"> | </span>{{quote.data.email}}</h5>
+            <h3>{{quote.data.tripType}}</h3>
+        </accordion-group>
+    </accordion>
+</div>

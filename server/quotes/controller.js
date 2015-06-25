@@ -5,7 +5,11 @@ var model = Promise.promisifyAll(require('./model'));
 
 module.exports = {
 	get: function(req, res) {
-
+		model.find()
+			.then(function(data) {
+				console.log(data);
+				res.send(data);
+			});
 	},
 	post: function(req, res) {
 		model.create(req.body)

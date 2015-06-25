@@ -10,6 +10,8 @@ function Config($routeProvider) {
     .when('/getquoted', { templateUrl: 'app/getquoted/view.html' })
     .when('/about',     { templateUrl: 'app/about/view.html' })
     .when('/contact',   { templateUrl: 'app/contact/view.html' })
-    .when('/login',     { templateUrl: 'app/login/view.html'});
+    .when('/login',     { templateUrl: 'app/login/view.html'})
+    .when('/dashboard', { templateUrl: 'app/dashboard/view.html'})
+    .otherwise('/');
 
 }
