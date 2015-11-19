@@ -1,0 +1,15 @@
+
+.section.types {
+  text-align: center;
+}
+
+.section.types > .a {
+  display: flex;
+}
+
+.section.types > .a > .type {
+  background-color: #DDD;
+  flex: 1;
+  padding: 2rem;
+  margin: 1rem;
+}

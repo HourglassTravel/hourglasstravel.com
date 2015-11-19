@@ -1,0 +1,22 @@
+
+.about > .a {
+  background-image: url('../../assets/tonybeth.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 0 0 25rem;
+}
+
+.about > .b {
+  border-top: 1px solid #C5CAE9;
+  background: #E8EAF6;
+}
+
+.about > .b > .container {
+  padding: 1rem;
+}
+
+.about > .b > .container > * {
+  text-align: justify;
+  margin: 1rem;  
+}

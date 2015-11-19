@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="app/navbar/navbarStyles.css">
+<div ng-controller="navbarController as navbar" class="navbar row container">
+  <a href="#/home" class="logo">
+    <img src="assets/light.png" alt="" />
+  </a>
+  <div class="flex"></div>
+  <a ng-repeat="route in navbar.$route.routes" ng-if="route.nav" href="#{{route.originalPath}}" class="link {{navbar.$route.current.title === route.title ? 'active' : ''}}">
+    {{route.title}}
+  </a>
+</div>

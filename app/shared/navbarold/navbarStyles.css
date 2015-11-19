@@ -1,0 +1,25 @@
+
+.navbar > .logo > img {
+  padding: 0 0.5rem;
+  max-height: 2.3rem;
+  margin-top: 0.8rem;
+}
+
+.navbar > .link {
+  font-size: 0.8rem;
+  padding: 1.53rem 0.5rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  transition: all 250ms ease;
+}
+
+.navbar > .link:hover {
+  background-color: #546E7A;
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar > .link.active {
+  background-color: #546E7A;
+  color: rgba(255, 255, 255, 1);
+}

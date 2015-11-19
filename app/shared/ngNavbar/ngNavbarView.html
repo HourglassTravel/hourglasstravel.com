@@ -1,0 +1,9 @@
+<div ng-controller="ngNavbarController as ngNavbar" class="navbar container row f1 wrap">
+  <a ng-repeat="route in ngNavbar.$route.routes" ng-if="route.nav" href="#{{route.originalPath}}" class="col jcc link {{ngNavbar.$route.current.title === route.title ? 'active' : ''}}">
+    {{route.title}}
+  </a>
+  <div class="f1 spacer"></div>
+  <div class="slogan col jcc">
+    <span>Making Time Count</span>
+  </div>
+</div>

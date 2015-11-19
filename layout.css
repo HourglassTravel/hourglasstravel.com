@@ -1,0 +1,82 @@
+
+/* Layout */
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-rendering: geometricPrecision;
+  overflow: hidden;
+}
+
+
+ng-navbar {
+  z-index: 1;
+  flex: 0 0 4rem;
+  background-color: #607D8B;
+  box-shadow: 0rem -1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  z-index: 0;
+  max-height: calc(100vh - 4rem);
+  overflow: auto;
+}
+
+/* Helpers */
+
+.flex {
+  flex: 1;
+}
+
+.flexa {
+  flex: auto;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  padding-right: .9375rem;
+  padding-left: .9375rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 34em) {
+  .container {
+    max-width: 34rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 45rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container {
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container {
+    max-width: 72.25rem;
+  }
+}

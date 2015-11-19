@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  font-family: sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+ng-navbar {
+  flex: 0 0 4rem;
+  display: flex;
+}
+
+ng-navbar .link {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #666;
+  transition: color 250ms ease;
+}
+
+ng-navbar .link:hover {
+  color: #AAA;
+}
+
+ng-navbar .link.active {
+  color: #b29323;
+}
+
+ng-navbar .slogan {
+  color: #696969;
+  font-size: 1.75rem;
+}
+
+.content {
+  min-height: calc(100vh - 4rem);
+}
+
+ng-view {
+  min-height: calc(100vh - 18rem);
+  /*display: flex;*/
+  background-image: url('assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 136%;
+  background-position: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: solid 1px #a9b4bb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 0.4rem 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.section {
+  margin: 1rem;
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.section .title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #7D7969;
+  font-weight: bold;
+}
+
+.section > * {
+  margin: 1rem 0;
+}
+
+.section > img {
+  max-width: 15rem;
+}
+
+ng-footer {
+  margin-top: 1rem;
+}
+
+ng-footer .dark {
+  background-color: #444;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+ng-footer .dark .logo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+ng-footer .dark .logo img {
+  max-height: 4rem;
+}
+
+ng-footer .dark .social {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+ng-footer .dark .social a {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+  transition: color 250ms ease;
+}
+
+ng-footer .dark .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+ng-footer .darker {
+  text-align: center;
+  background-color: #333;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 622px){
+
+  .content {
+    min-height: calc(100vh - 6rem);
+  }
+
+  ng-view {
+    min-height: calc(100vh - 20rem);
+  }
+
+  ng-navbar {
+    flex: 0 0 6rem;
+  }
+
+  ng-navbar .slogan {
+    margin-top: 1rem;
+    order: -1;
+    flex: 0 0 100%;
+    align-items: center;
+    /*display: none;*/
+  }
+
+  ng-navbar .link {
+    flex: auto;
+    align-items: center;
+  }
+
+  ng-navbar .spacer {
+    display: none;
+  }
+
+}
+
+
+/* Helpers */
+
+.f1 {
+  flex: 1;
+}
+
+.fa {
+  flex: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.acc {
+  align-content: center;
+}
+
+.container {
+  padding-right: .9375rem;
+  padding-left: .9375rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 34em) {
+  .container {
+    max-width: 34rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 45rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .container {
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container {
+    max-width: 72.25rem;
+  }
+}

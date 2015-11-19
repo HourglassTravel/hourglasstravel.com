@@ -1,0 +1,45 @@
+
+.home > .a {
+  background-image: url('../../assets/thing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  flex: 0 0 30rem;
+}
+
+.home > .a > .a {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.home > .a > .a > span {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.home > .a > .b {
+  align-items: center;
+}
+
+.home > .a > .b > span {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.home > .b {
+  border-top: 1px solid #ECEFF1;
+  background: #ECEFF1;
+}
+
+.home > .b > .container {
+  padding: 1rem;
+}
+
+.home > .b > .container > * {
+  text-align: justify;
+  margin: 1rem;  
+}

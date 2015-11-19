@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="app/quote/quoteStyles.css">
+<div ng-controller="quoteController as quote" class="quote flex column">
+  <div class="a">
+    <div class="container">
+      <div class="section types">
+        <h2>Where would you like to go?</h2>
+        <div class="a">
+          <div ng-repeat="type in quote.types" class="type">
+            {{type.name}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+
+.footer {
+  flex: auto;
+}
+
+.footer > .a {
+  padding: 2rem;
+  align-items: center;
+  background-color: #CFD8DC;
+  border-bottom: 1px solid #B0BEC5;
+  border-top: 1px solid #B0BEC5;
+}
+
+.footer > .a > .logo {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.footer > .a > .logo > img {
+  max-height: 4rem;
+}
+
+.footer > .a > .social {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.footer > .a > .social > * {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 250ms ease;
+}
+
+.footer > .a > .social > *:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.footer > .b {
+  align-items: center;
+  background-color: #ECEFF1;
+  border-bottom: 1px solid #C5CAE9;
+  padding: 1rem;
+}
+
+.footer > .b > span {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+}
