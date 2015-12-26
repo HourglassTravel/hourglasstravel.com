@@ -57,25 +57,54 @@ ng-view {
 
 .section {
   margin: 1rem;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 
-.section .title {
+.section > .title {
+  margin: 1rem 0;
   text-align: center;
   text-transform: uppercase;
   color: #7D7969;
   font-weight: bold;
 }
 
-.section > * {
-  margin: 1rem 0;
+.section > .body {
 }
 
-.section > img {
+.section > .body > p {
+  /*max-width: 18rem;*/
+  color: #a09b8c;
+  font-weight: normal;
+}
+
+.section > .body > .frame {
+  border: 10px solid #edeaea;
+  background-color: #edeaea;
+}
+
+.section > .body > img {
   max-width: 15rem;
+}
+
+.section > .body .a {
+  color: #a09b8c;
+  list-style: none;
+  padding-left: 0;
+  font-weight: bold;
+}
+
+.section > .body .a a {
+  color: #a09b8c;
+}
+
+.section > .body .b {
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-left: 1.1rem;
+  list-style-type: disc;
 }
 
 ng-footer {
@@ -149,6 +178,10 @@ ng-footer .darker {
   }
 
   ng-navbar .spacer {
+    display: none;
+  }
+
+  hr {
     display: none;
   }
 
