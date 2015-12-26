@@ -1,15 +1,16 @@
 {
-  "name": "template",
-  "version": "1.0.0",
+  "name": "hourglasstravel",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.5",
     "angular-route": "^1.4.5",
-    "express": "^4.13.3",
-    "particles.js": "^2.0.0"
+    "express": "^4.13.3"
   }
 }
